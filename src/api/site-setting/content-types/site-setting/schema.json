@@ -1,0 +1,24 @@
+{
+  "kind": "singleType",
+  "collectionName": "site_settings",
+  "info": {
+    "singularName": "site-setting",
+    "pluralName": "site-settings",
+    "displayName": "Site Setting",
+    "description": "Globale Seiteneinstellungen"
+  },
+  "options": { "draftAndPublish": false },
+  "pluginOptions": {},
+  "attributes": {
+    "siteName": { "type": "string" },
+    "siteSubtitle": { "type": "string" },
+    "logoText": { "type": "string" },
+    "email": { "type": "string" },
+    "location": { "type": "string" },
+    "responseTime": { "type": "string" },
+    "socialInstagram": { "type": "string" },
+    "socialFacebook": { "type": "string" },
+    "socialYoutube": { "type": "string" },
+    "socialTiktok": { "type": "string" }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "kind": "singleType",
+  "collectionName": "hero_contents",
+  "info": {
+    "singularName": "hero-content",
+    "pluralName": "hero-contents",
+    "displayName": "Hero Content",
+    "description": "Hero-Bereich Inhalte"
+  },
+  "options": { "draftAndPublish": true },
+  "pluginOptions": {},
+  "attributes": {
+    "tagline": { "type": "string" },
+    "titleLine1": { "type": "string" },
+    "titleLine2": { "type": "string" },
+    "description": { "type": "text" },
+    "ctaPrimaryText": { "type": "string" },
+    "ctaPrimaryLink": { "type": "string" },
+    "ctaSecondaryText": { "type": "string" },
+    "ctaSecondaryLink": { "type": "string" }
+  }
+}

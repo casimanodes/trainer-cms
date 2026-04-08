@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "about_contents",
+  "info": {
+    "singularName": "about-content",
+    "pluralName": "about-contents",
+    "displayName": "About Content",
+    "description": "Ueber mich Inhalte"
+  },
+  "options": { "draftAndPublish": true },
+  "pluginOptions": {},
+  "attributes": {
+    "headline": { "type": "string" },
+    "highlightedWord": { "type": "string" },
+    "text1": { "type": "text" },
+    "text2": { "type": "text" },
+    "portraitImage": { "type": "media", "multiple": false, "allowedTypes": ["images"] },
+    "portraitBadgeText": { "type": "string" }
+  }
+}

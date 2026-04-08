@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "themenbereiche",
+  "info": {
+    "singularName": "themenbereich",
+    "pluralName": "themenbereiche",
+    "displayName": "Themenbereich",
+    "description": "Themenbereiche fuer Hero-Grid"
+  },
+  "options": { "draftAndPublish": true },
+  "pluginOptions": {},
+  "attributes": {
+    "titel": { "type": "string", "required": true },
+    "beschreibung": { "type": "text" },
+    "bild": { "type": "media", "multiple": false, "allowedTypes": ["images"] },
+    "slug": { "type": "string" },
+    "reihenfolge": { "type": "integer", "default": 0 }
+  }
+}
