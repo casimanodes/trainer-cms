@@ -10,8 +10,20 @@ const config: Core.Config.Middlewares = [
         useDefaults: true,
         directives: {
           'connect-src': ["'self'", 'https:'],
-          'img-src': ["'self'", 'data:', 'blob:', 'res.cloudinary.com'],
-          'media-src': ["'self'", 'data:', 'blob:', 'res.cloudinary.com'],
+          'img-src': [
+            "'self'",
+            'data:',
+            'blob:',
+            'market-assets.strapi.io',    // Strapi Cloud Media
+            'res.cloudinary.com',          // Fallback: Cloudinary
+          ],
+          'media-src': [
+            "'self'",
+            'data:',
+            'blob:',
+            'market-assets.strapi.io',
+            'res.cloudinary.com',
+          ],
           upgradeInsecureRequests: null,
         },
       },
@@ -21,9 +33,9 @@ const config: Core.Config.Middlewares = [
     name: 'strapi::cors',
     config: {
       origin: [
-        'http://localhost:3000',
-        'https://*.vercel.app',
-        process.env.FRONTEND_URL || '',
+        'http://localhost:3000',           // Lokale Entwicklung
+        'https://*.vercel.app',            // Vercel Preview Deployments
+        process.env.FRONTEND_URL || '',    // Produktion (Custom Domain / Vercel)
       ].filter(Boolean),
       methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'HEAD', 'OPTIONS'],
       headers: ['Content-Type', 'Authorization', 'Origin', 'Accept'],

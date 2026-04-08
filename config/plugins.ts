@@ -1,7 +1,8 @@
 import type { Core } from '@strapi/strapi';
 
 const config = ({ env }: Core.Config.Shared.ConfigParams): Core.Config.Plugin => ({
-  // Cloudinary upload provider (only active when CLOUDINARY_NAME is set)
+  // Strapi Cloud: Uploads werden automatisch verwaltet (kein Provider noetig)
+  // Fuer Self-Hosting: Cloudinary aktivieren via CLOUDINARY_NAME Env-Var
   ...(env('CLOUDINARY_NAME')
     ? {
         upload: {
